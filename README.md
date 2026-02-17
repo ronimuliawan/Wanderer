@@ -31,7 +31,7 @@ Done. Your Telegram backup is running. ✅
 If you are not technical, use a prebuilt release.
 
 1. Open the project Releases page:
-   - `https://github.com/ronimuliawan/wanderbackup-rust/releases`
+   - [Wander(er) Releases](https://github.com/ronimuliawan/Wanderer/releases)
 2. Download the latest Windows build
 3. Install and open Wander(er)
 
