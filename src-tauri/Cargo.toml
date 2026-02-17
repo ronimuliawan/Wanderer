@@ -22,8 +22,8 @@ tauri = { version = "2", features = ["protocol-asset"] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-grammers-client = { path = "vendor/grammers/grammers-client", default-features = false, features = ["fs"] }
-grammers-session = { path = "vendor/grammers/grammers-session", default-features = false, features = ["sqlite-storage"] }
+grammers-client = { git = "https://github.com/Lonami/grammers", rev = "b595a8c4fdfa5c3a8abcb5766c959ecfe30e9f6e", package = "grammers-client", default-features = false, features = ["fs"] }
+grammers-session = { git = "https://github.com/Lonami/grammers", rev = "b595a8c4fdfa5c3a8abcb5766c959ecfe30e9f6e", package = "grammers-session", default-features = false, features = ["sqlite-storage"] }
 tokio = { version = "1.49.0", features = ["full"] }
 rusqlite = { version = "0.38.0", features = ["bundled"] }
 # sqlite = "0.37.0"
