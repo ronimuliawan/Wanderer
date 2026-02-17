@@ -1,0 +1,64 @@
+[package]
+name = "tauri-app"
+version = "0.0.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+grammers-client = { path = "vendor/grammers/grammers-client", default-features = false, features = ["fs"] }
+grammers-session = { path = "vendor/grammers/grammers-session", default-features = false, features = ["sqlite-storage"] }
+tokio = { version = "1.49.0", features = ["full"] }
+rusqlite = { version = "0.38.0", features = ["bundled"] }
+# sqlite = "0.37.0"
+notify = "6.1.1"
+blake3 = "1.5.5"
+thiserror = "2.0.11"
+log = "0.4.25"
+env_logger = "0.11.6"
+dirs = "5.0"
+dotenvy = "0.15.7"
+time = { version = "0.3.44", features = ["serde", "macros", "formatting", "parsing"] }
+image = "0.24"
+# `img_hash` depends on `image` <0.24 with default features disabled.
+# Add an explicit 0.23 image dependency with codecs enabled so perceptual
+# hash decoding works for JPEG/PNG.
+image_023 = { package = "image", version = "0.23.14", default-features = true }
+tauri-plugin-mcp-bridge = "0.7.0"
+tauri-plugin-dialog = "2.5.0"
+tauri-plugin-fs = "2"
+mime_guess = "2.0.5"
+moka = { version = "0.12", features = ["future"] }
+tract-onnx = "0.21.7"
+anyhow = "1.0.100"
+ndarray = "0.16"
+img_hash = "3.2.0"
+filetime = "0.2.27"
+kamadak-exif = "0.5"
+hostname = "0.3"
+reqwest = { version = "0.12", features = ["stream", "rustls-tls"] }
+futures-util = "0.3"
+tokenizers = { version = "0.19", default-features = false, features = ["onig"] }
+tokio-util = { version = "0.7.18", features = ["rt"] }
+aes-gcm = "0.10.3"
+argon2 = "0.5.3"
+base64 = "0.22.1"
+rand = "0.8.5"
+windows-sys = { version = "0.60.2", features = ["Win32_Foundation", "Win32_Security_Cryptography", "Win32_System_Memory"] }
+hex = "0.4.3"
