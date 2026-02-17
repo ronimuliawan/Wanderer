@@ -8,9 +8,10 @@ Wander(er) is a desktop media manager app for people who want:
 - Easy cleanup with Cloud-Only mode
 - Fast browsing, search, albums, and AI helpers
 
-This README is written for regular users, not developers.
+> [!NOTE]
+> This is an initial Windows release, so expect some bugs or placeholder features.
+> Android, macOS, and maybe Linux are planned later. Current focus is finishing the Windows roadmap first.
 
-Note: This is an initial release for Windows, expect some bugs or placeholder features in the app. While I am planning to release this for Android, MacOS and maybe Linux as well. I will focus on finishing the current Windows app roadmap first.
 ---
 
 ## ⚡ Quick Start (60 Seconds)
@@ -30,10 +31,12 @@ Done. Your Telegram backup is running. ✅
 
 If you are not technical, use a prebuilt release.
 
-1. Open the project Releases page:
-   - [Wander(er) Releases](https://github.com/ronimuliawan/Wanderer/releases)
-2. Download the latest Windows build
-3. Install and open Wander(er)
+- Releases page (all versions): [Wander(er) Releases](https://github.com/ronimuliawan/Wanderer/releases)
+- Direct download (Windows x64, v0.0.0): [Wanderer._0.0.0_x64-setup.exe](https://github.com/ronimuliawan/Wanderer/releases/download/0.0.0/Wanderer._0.0.0_x64-setup.exe)
+- Direct download (Windows x64, latest): [Wanderer._0.0.0_x64-setup.exe (latest link)](https://github.com/ronimuliawan/Wanderer/releases/latest/download/Wanderer._0.0.0_x64-setup.exe)
+
+1. Download the installer
+2. Install and open Wander(er)
 
 If you are running from source, see `For Developers (Optional)` at the bottom.
 
