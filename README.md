@@ -10,6 +10,7 @@ Wander(er) is a desktop media manager app for people who want:
 
 This README is written for regular users, not developers.
 
+Note: This is an initial release for Windows, expect some bugs or placeholder features in the app. While I am planning to release this for Android, MacOS and maybe Linux as well. I will focus on finishing the current Windows app roadmap first.
 ---
 
 ## ⚡ Quick Start (60 Seconds)
