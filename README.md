@@ -1,6 +1,6 @@
 # Wander(er) 📸
 
-Wander(er) is a desktop photo backup app for people who want:
+Wander(er) is a desktop media manager app for people who want:
 
 - Local library control
 - Telegram cloud backup
@@ -21,7 +21,7 @@ This README is written for regular users, not developers.
 5. Click `Import Files` and select photos/videos
 6. Open `Uploads` and wait until done
 
-Done. Your backup is running. ✅
+Done. Your Telegram backup is running. ✅
 
 ---
 
@@ -87,8 +87,8 @@ When you open Wander(er) for the first time, it shows a setup flow.
 ### 1. Choose Protection Mode
 
 - `Encrypted (Recommended)`:
-  - Files are encrypted before cloud upload
-  - Better privacy for cloud backups
+  - Files are encrypted before Telegram cloud upload
+  - Better privacy for Telegram cloud backups
 - `Unencrypted`:
   - Faster setup
   - Cloud copies are plaintext
