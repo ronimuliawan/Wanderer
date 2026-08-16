@@ -5,51 +5,78 @@ description: Searchable router and catalog for off-stack, specialized, and domai
 
 # ECC Skill Library Router
 
-This workspace (`Wanderer`) uses an evidence-backed **DAILY** install set tailored specifically for its Tauri 2 + Rust + React 19 + TypeScript + SQLite + ONNX stack.
+This workspace (`Wanderer`) uses a lean, stack-aligned **DAILY** install set tailored specifically for its **Tauri 2 + Rust + React 19 + TypeScript + SQLite + ONNX** desktop architecture.
 
-All other skills are maintained in the central ECC Library at `/home/ron/Projects/ECC/skills/` and can be consulted on-demand when relevant needs arise.
-
----
-
-## Skill Categories & Triggers
-
-### 1. Alternative Backend & Database Stacks
-- **PostgreSQL / MySQL / Redis / ClickHouse / Prisma / NestJS / Bun**:
-  - `postgres-patterns`, `mysql-patterns`, `redis-patterns`, `clickhouse-io`, `prisma-patterns`, `backend-patterns`, `nestjs-patterns`, `bun-runtime`
-  - *Location*: `/home/ron/Projects/ECC/skills/<skill-name>/`
-
-### 2. Python, Django, FastAPI & Machine Learning
-- **Python / Django / Celery / FastAPI / PyTorch / MLE**:
-  - `python-patterns`, `python-testing`, `django-patterns`, `django-celery`, `django-security`, `django-tdd`, `django-verification`, `fastapi-patterns`, `pytorch-patterns`, `mle-workflow`
-  - *Location*: `/home/ron/Projects/ECC/skills/<skill-name>/`
-
-### 3. Mobile, Multiplatform & Other Languages
-- **Flutter / Dart / Android / Swift / SwiftUI / Kotlin / Java / Go / C++ / C# / .NET / F# / PHP / Vue / Angular / Nuxt**:
-  - `dart-flutter-patterns`, `flutter-dart-code-review`, `android-clean-architecture`, `swiftui-patterns`, `swift-concurrency-6-2`, `swift-actor-persistence`, `swift-protocol-di-testing`, `kotlin-patterns`, `kotlin-testing`, `kotlin-coroutines-flows`, `kotlin-exposed-patterns`, `kotlin-ktor-patterns`, `java-coding-standards`, `jpa-patterns`, `springboot-patterns`, `springboot-security`, `springboot-tdd`, `quarkus-patterns`, `golang-patterns`, `golang-testing`, `cpp-coding-standards`, `cpp-testing`, `csharp-testing`, `dotnet-patterns`, `fsharp-testing`, `php-patterns`, `laravel-patterns`, `laravel-security`, `laravel-tdd`, `vue-patterns`, `angular-developer`, `nuxt4-patterns`, `react-native-patterns`, `compose-multiplatform-patterns`
-  - *Location*: `/home/ron/Projects/ECC/skills/<skill-name>/`
-
-### 4. Enterprise, Infrastructure & Cloud Ops
-- **Docker / Kubernetes / Environments / CI / Observability**:
-  - `docker-patterns`, `kubernetes-patterns`, `flox-environments`, `canary-watch`, `uncloud`, `deployment-patterns`, `production-audit`
-  - *Location*: `/home/ron/Projects/ECC/skills/<skill-name>/`
-
-### 5. Media Creation, Video & 3D
-- **Video Editing / Motion Graphics / Blender**:
-  - `video-editing`, `videodb`, `manim-video`, `remotion-video-creation`, `fal-ai-media`, `blender-motion-state-inspection`
-  - *Location*: `/home/ron/Projects/ECC/skills/<skill-name>/`
-
-### 6. Domain-Specific (Healthcare, Homelab, Web3, Trade, Marketing)
-- **Healthcare**: `healthcare-cdss-patterns`, `healthcare-emr-patterns`, `healthcare-eval-harness`, `healthcare-phi-compliance`, `hipaa-compliance`
-- **Homelab & Networking**: `homelab-network-setup`, `homelab-network-readiness`, `homelab-pihole-dns`, `homelab-vlan-segmentation`, `homelab-wireguard-vpn`, `cisco-ios-patterns`, `netmiko-ssh-automation`, `network-bgp-diagnostics`, `network-config-validation`, `network-interface-health`
-- **Web3 & Trading**: `defi-amm-security`, `evm-token-decimals`, `prediction-market-oracle-research`, `prediction-market-risk-review`, `llm-trading-agent-security`
-- **Business Ops & Marketing**: `customer-billing-ops`, `finance-billing-ops`, `customs-trade-compliance`, `energy-procurement`, `inventory-demand-planning`, `logistics-exception-management`, `returns-reverse-logistics`, `marketing-campaign`, `social-publisher`, `social-graph-ranker`, `seo`, `lead-intelligence`, `investor-materials`, `investor-outreach`
-- **Scientific Research**: `scientific-db-pubmed-database`, `scientific-db-uspto-database`, `scientific-pkg-gget`, `scientific-thinking-literature-review`, `scientific-thinking-scholar-evaluation`
+All other agents, skills, and workflows are retained in the central ECC repository at `/home/ron/Projects/ECC/` and can be consulted on-demand when relevant needs arise.
 
 ---
 
-## How to Load a Library Skill
+## 1. Off-Stack Language & Framework Surfaces
+*Location*: `/home/ron/Projects/ECC/`
 
-When working on a specialized task requiring one of these capabilities:
-1. Locate the skill instructions at `/home/ron/Projects/ECC/skills/<skill-name>/SKILL.md`.
+### Python, Django, FastAPI & Machine Learning
+- **Skills**: `python-patterns`, `python-testing`, `django-patterns`, `django-celery`, `django-security`, `django-tdd`, `fastapi-patterns`, `pytorch-patterns`, `mle-workflow`
+- **Agents**: `python-reviewer.md`, `django-reviewer.md`, `django-build-resolver.md`, `fastapi-reviewer.md`, `pytorch-build-resolver.md`, `mle-reviewer.md`, `rag-pipeline-reviewer.md`
+- **Workflows**: `python-review.md`, `fastapi-review.md`
+
+### Go
+- **Skills**: `golang-patterns`, `golang-testing`
+- **Agents**: `go-reviewer.md`, `go-build-resolver.md`
+- **Workflows**: `go-build.md`, `go-review.md`, `go-test.md`
+
+### Java, Kotlin, Spring & Quarkus
+- **Skills**: `java-coding-standards`, `jpa-patterns`, `kotlin-patterns`, `kotlin-testing`, `kotlin-coroutines-flows`, `kotlin-exposed-patterns`, `kotlin-ktor-patterns`, `springboot-patterns`, `springboot-security`, `springboot-tdd`, `quarkus-patterns`, `quarkus-security`, `quarkus-tdd`
+- **Agents**: `java-reviewer.md`, `java-build-resolver.md`, `kotlin-reviewer.md`, `kotlin-build-resolver.md`
+- **Workflows**: `kotlin-build.md`, `kotlin-review.md`, `kotlin-test.md`, `gradle-build.md`
+
+### C++, C#, .NET & F#
+- **Skills**: `cpp-coding-standards`, `cpp-testing`, `csharp-testing`, `dotnet-patterns`, `fsharp-testing`
+- **Agents**: `cpp-reviewer.md`, `cpp-build-resolver.md`, `csharp-reviewer.md`, `fsharp-reviewer.md`
+- **Workflows**: `cpp-build.md`, `cpp-review.md`, `cpp-test.md`
+
+### Swift, iOS, Flutter, Dart & HarmonyOS
+- **Skills**: `swiftui-patterns`, `swift-concurrency-6-2`, `swift-actor-persistence`, `swift-protocol-di-testing`, `dart-flutter-patterns`, `flutter-dart-code-review`, `android-clean-architecture`
+- **Agents**: `swift-reviewer.md`, `swift-build-resolver.md`, `flutter-reviewer.md`, `dart-build-resolver.md`, `harmonyos-app-resolver.md`
+- **Workflows**: `flutter-build.md`, `flutter-review.md`, `flutter-test.md`
+
+### Vue, Nuxt, Angular, PHP, Laravel & Ruby
+- **Skills**: `vue-patterns`, `nuxt4-patterns`, `angular-developer`, `php-patterns`, `laravel-patterns`, `laravel-security`, `laravel-tdd`, `perl-patterns`, `ruby-patterns`
+- **Agents**: `vue-reviewer.md`, `php-reviewer.md`
+- **Workflows**: `vue-review.md`
+
+---
+
+## 2. Specialized Domain Surfaces
+
+### Healthcare & Life Sciences
+- **Skills**: `healthcare-cdss-patterns`, `healthcare-emr-patterns`, `healthcare-eval-harness`, `healthcare-phi-compliance`, `hipaa-compliance`
+- **Agents**: `healthcare-reviewer.md`
+
+### Homelab & Network Automation
+- **Skills**: `homelab-network-setup`, `homelab-network-readiness`, `homelab-pihole-dns`, `homelab-vlan-segmentation`, `homelab-wireguard-vpn`, `cisco-ios-patterns`, `netmiko-ssh-automation`, `network-bgp-diagnostics`, `network-config-validation`, `network-interface-health`
+- **Agents**: `homelab-architect.md`, `network-architect.md`, `network-config-reviewer.md`, `network-troubleshooter.md`
+
+### Web3, Crypto & Finance Ops
+- **Skills**: `defi-amm-security`, `evm-token-decimals`, `prediction-market-oracle-research`, `prediction-market-risk-review`, `llm-trading-agent-security`, `customer-billing-ops`, `finance-billing-ops`
+
+### Media Creation & External Generative Services
+- **Skills**: `video-editing`, `videodb`, `manim-video`, `remotion-video-creation`, `fal-ai-media`, `blender-motion-state-inspection`
+
+### Logistics & International Trade
+- **Skills**: `customs-trade-compliance`, `energy-procurement`, `inventory-demand-planning`, `logistics-exception-management`, `returns-reverse-logistics`, `visa-doc-translate`
+
+---
+
+## 3. Meta & Multi-Model Orchestration Surfaces
+- **Skills**: `council`, `council-multi-model`, `dev-team`, `santa-method`, `plankton-code-quality`, `openclaw-persona-forge`, `nanoclaw-repl`, `dmux-workflows`, `ito-*`
+- **Agents**: `agent-evaluator.md`, `chief-of-staff.md`, `code-explorer.md`, `comment-analyzer.md`, `conversation-analyzer.md`, `gan-*`, `harness-optimizer.md`, `loop-operator.md`, `spec-miner.md`
+- **Workflows**: `multi-*`, `orch-*`, `epic-*`, `gan-*`, `instinct-*`, `prp-*`, `santa-loop.md`, `sessions.md`, `pm2.md`, `jira.md`
+
+---
+
+## How to Load a Library Surface
+
+When working on a task requiring one of these capabilities:
+1. Locate the instructions or agent definition at `/home/ron/Projects/ECC/<skills|agents|commands>/`.
 2. Review its guidelines and referenced patterns.
-3. If the skill is permanently needed in this repo, promote it using `agent-sort` or copy it into `.agents/skills/<skill-name>/`.
+3. If a component becomes permanently needed in this repo, promote it using `agent-sort` into `.agents/`.
