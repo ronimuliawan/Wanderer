@@ -1,12 +1,14 @@
 ---
 name: django-reviewer
-description: Expert Django code reviewer specializing in ORM correctness, DRF patterns, migration safety, security misconfigurations, and production-grade Django practices. Use for all Django code changes. MUST BE USED for Django projects.
+description: Expert Django code reviewer specializing in ORM correctness, DRF patterns,
+  migration safety, security misconfigurations, and production-grade Django practices.
+  Use for all Django code changes. MUST BE USED for Django projects.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

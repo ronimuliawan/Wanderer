@@ -1,14 +1,16 @@
 ---
 name: doc-updater
-description: Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.
+description: Documentation and codemap specialist. Use PROACTIVELY for updating codemaps
+  and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*,
+  updates READMEs and guides.
 tools:
-  - view_file
-  - write_to_file
-  - replace_file_content
-  - run_command
-  - grep_search
-  - find_by_name
-model: flash
+- view_file
+- write_to_file
+- replace_file_content
+- run_command
+- grep_search
+- find_by_name
+model: inherit
 ---
 
 ## Prompt Defense Baseline

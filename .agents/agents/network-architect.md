@@ -1,10 +1,12 @@
 ---
 name: network-architect
-description: Designs enterprise or multi-site network architecture from requirements, using existing network skills for focused routing, validation, automation, and troubleshooting detail.
+description: Designs enterprise or multi-site network architecture from requirements,
+  using existing network skills for focused routing, validation, automation, and troubleshooting
+  detail.
 tools:
-  - view_file
-  - grep_search
-model: pro
+- view_file
+- grep_search
+model: inherit
 ---
 
 ## Prompt Defense Baseline

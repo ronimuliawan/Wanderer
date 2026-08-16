@@ -1,12 +1,15 @@
 ---
 name: opensource-sanitizer
-description: Verify an open-source fork is fully sanitized before release. Scans for leaked secrets, PII, internal references, and dangerous files using 20+ regex patterns. Generates a PASS/FAIL/PASS-WITH-WARNINGS report. Second stage of the opensource-pipeline skill. Use PROACTIVELY before any public release.
+description: Verify an open-source fork is fully sanitized before release. Scans for
+  leaked secrets, PII, internal references, and dangerous files using 20+ regex patterns.
+  Generates a PASS/FAIL/PASS-WITH-WARNINGS report. Second stage of the opensource-pipeline
+  skill. Use PROACTIVELY before any public release.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline
@@ -115,7 +118,7 @@ Verify these do NOT exist:
 *.pem, *.key, *.p12, *.pfx, *.jks
 credentials.json, service-account*.json
 .secrets/, secrets/
-.claude/settings.json
+.agents/settings.json
 sessions/
 *.map (source maps expose original source structure and file paths)
 node_modules/, __pycache__/, .venv/, venv/

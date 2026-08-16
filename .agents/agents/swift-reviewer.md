@@ -1,12 +1,14 @@
 ---
 name: swift-reviewer
-description: Expert Swift code reviewer specializing in protocol-oriented design, value semantics, ARC memory management, Swift Concurrency, and idiomatic patterns. Use for all Swift code changes. MUST BE USED for Swift projects.
+description: Expert Swift code reviewer specializing in protocol-oriented design,
+  value semantics, ARC memory management, Swift Concurrency, and idiomatic patterns.
+  Use for all Swift code changes. MUST BE USED for Swift projects.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

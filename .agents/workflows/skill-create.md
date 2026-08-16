@@ -64,7 +64,7 @@ Set `skill-name` once; it defaults to the normalized `{repo-name}-patterns`, and
 the same value must be used for the directory and frontmatter. Validate the
 final `skill-name`, then write the generated skill to
 `<output-dir>/<skill-name>/SKILL.md`. The default project root is
-`.claude/skills/`; a global skill uses `~/.claude/skills/`.
+`.agents/skills/`; a global skill uses `~/.agents/skills/`.
 
 Discovery depends on the root, not only the filename. A custom `--output` is a
 configured skill root only when the active harness is set up to discover it.

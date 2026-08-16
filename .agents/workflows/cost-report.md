@@ -11,7 +11,7 @@ log that ECC's `stop:cost-tracker` hook writes.
 ## Where the data lives
 
 The tracker appends one JSON object per session-stop to
-`~/.claude/metrics/costs.jsonl`. Each row is a **cumulative snapshot for that
+`~/.agents/metrics/costs.jsonl`. Each row is a **cumulative snapshot for that
 session**, so the report takes the **latest row per `session_id`** and sums
 across sessions (summing every row would multiply-count).
 
@@ -20,7 +20,7 @@ Row schema:
 
 ## What this command does
 
-1. Check that `~/.claude/metrics/costs.jsonl` exists. If it does not, tell the
+1. Check that `~/.agents/metrics/costs.jsonl` exists. If it does not, tell the
    user the tracker is not set up yet (it populates after the first session ends
    with the `stop:cost-tracker` hook enabled).
 2. Reduce rows to the latest snapshot per session and aggregate.

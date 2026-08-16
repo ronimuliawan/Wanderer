@@ -4,7 +4,7 @@ description: Manage Claude Code session history, aliases, and session metadata.
 
 # Sessions Command
 
-Manage Claude Code session history - list, load, alias, and edit sessions stored in `~/.claude/session-data/` with legacy reads from `~/.claude/sessions/`.
+Manage Claude Code session history - list, load, alias, and edit sessions stored in `~/.agents/session-data/` with legacy reads from `~/.agents/sessions/`.
 
 ## Usage
 
@@ -333,7 +333,7 @@ $ARGUMENTS:
 
 ## Notes
 
-- Sessions are stored as markdown files in `~/.claude/session-data/` with legacy reads from `~/.claude/sessions/`
-- Aliases are stored in `~/.claude/session-aliases.json`
+- Sessions are stored as markdown files in `~/.agents/session-data/` with legacy reads from `~/.agents/sessions/`
+- Aliases are stored in `~/.agents/session-aliases.json`
 - Session IDs can be shortened (first 4-8 characters usually unique enough)
 - Use aliases for frequently referenced sessions

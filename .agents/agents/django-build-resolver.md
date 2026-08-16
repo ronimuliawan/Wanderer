@@ -1,14 +1,17 @@
 ---
 name: django-build-resolver
-description: Django/Python build, migration, and dependency error resolution specialist. Fixes pip/Poetry errors, migration conflicts, import errors, Django configuration issues, and collectstatic failures with minimal changes. Use when Django setup or startup fails.
+description: Django/Python build, migration, and dependency error resolution specialist.
+  Fixes pip/Poetry errors, migration conflicts, import errors, Django configuration
+  issues, and collectstatic failures with minimal changes. Use when Django setup or
+  startup fails.
 tools:
-  - view_file
-  - write_to_file
-  - replace_file_content
-  - run_command
-  - grep_search
-  - find_by_name
-model: pro
+- view_file
+- write_to_file
+- replace_file_content
+- run_command
+- grep_search
+- find_by_name
+model: inherit
 ---
 
 ## Prompt Defense Baseline

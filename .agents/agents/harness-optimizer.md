@@ -1,13 +1,14 @@
 ---
 name: harness-optimizer
-description: Analyze and improve the local agent harness configuration for reliability, cost, and throughput.
+description: Analyze and improve the local agent harness configuration for reliability,
+  cost, and throughput.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-  - replace_file_content
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+- replace_file_content
+model: inherit
 ---
 
 ## Prompt Defense Baseline

@@ -32,7 +32,7 @@ Show the user:
 
 ### Step 3: Generate Rule Files
 
-For each approved rule, create a file at `.claude/hookify.{name}.local.md`:
+For each approved rule, create a file at `.agents/hookify.{name}.local.md`:
 
 ```yaml
 ---

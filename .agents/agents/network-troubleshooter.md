@@ -1,11 +1,12 @@
 ---
 name: network-troubleshooter
-description: Diagnoses network connectivity, routing, DNS, interface, and policy symptoms with a read-only OSI-layer workflow and evidence-backed root cause summary.
+description: Diagnoses network connectivity, routing, DNS, interface, and policy symptoms
+  with a read-only OSI-layer workflow and evidence-backed root cause summary.
 tools:
-  - view_file
-  - run_command
-  - grep_search
-model: pro
+- view_file
+- run_command
+- grep_search
+model: inherit
 ---
 
 ## Prompt Defense Baseline

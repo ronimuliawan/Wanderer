@@ -1,10 +1,11 @@
 ---
 name: network-config-reviewer
-description: Reviews router and switch configurations for security, correctness, stale references, risky change-window commands, and missing operational guardrails.
+description: Reviews router and switch configurations for security, correctness, stale
+  references, risky change-window commands, and missing operational guardrails.
 tools:
-  - view_file
-  - grep_search
-model: pro
+- view_file
+- grep_search
+model: inherit
 ---
 
 ## Prompt Defense Baseline

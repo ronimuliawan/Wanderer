@@ -36,17 +36,17 @@ Over many sessions of "ship and forget," the human hasn't grown. This hook enfor
 ## Install
 
 ```bash
-cp quality-gate.py ~/.claude/scripts/
+cp quality-gate.py ~/.agents/scripts/
 ```
 
-Add to `~/.claude/settings.json`:
+Add to `~/.agents/settings.json`:
 ```json
 {
   "hooks": {
     "Stop": [{
       "hooks": [{
         "type": "command",
-        "command": "python3 ~/.claude/scripts/quality-gate.py",
+        "command": "python3 ~/.agents/scripts/quality-gate.py",
         "timeout": 5000
       }]
     }]

@@ -1,12 +1,13 @@
 ---
 name: silent-failure-hunter
-description: Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.
-model: pro
+description: Review code for silent failures, swallowed errors, bad fallbacks, and
+  missing error propagation.
+model: inherit
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
+- view_file
+- grep_search
+- find_by_name
+- run_command
 ---
 
 ## Prompt Defense Baseline

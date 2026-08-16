@@ -1,13 +1,17 @@
 ---
 name: spec-miner
-description: Extracts behavioral specs from existing codebases for OpenSpec. Produces flat Requirement and Invariant blocks with structured metadata (entities, enforced, id, test anchors). Outputs openspec/specs/<capability>/spec.md. Fully self-bootstrapping — no dependency on codebase-onboarding. Use when onboarding a brownfield project to spec-driven development.
-model: pro
+description: "Extracts behavioral specs from existing codebases for OpenSpec. Produces\
+  \ flat Requirement and Invariant blocks with structured metadata (entities, enforced,\
+  \ id, test anchors). Outputs openspec/specs/<capability>/spec.md. Fully self-bootstrapping\
+  \ \u2014 no dependency on codebase-onboarding. Use when onboarding a brownfield\
+  \ project to spec-driven development."
+model: inherit
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-  - write_to_file
+- view_file
+- grep_search
+- find_by_name
+- run_command
+- write_to_file
 ---
 
 ## Tool guardrails

@@ -6,7 +6,7 @@ description: Execute a multi-model implementation plan while preserving Claude a
 
 Multi-model collaborative execution - Get prototype from plan → Claude refactors and implements → Multi-model audit and delivery.
 
-> **Prerequisite:** Requires the external `ccg-workflow` runtime, which is **not** part of the base ECC install. Initialize it with `npx ccg-workflow` to provision `~/.claude/bin/codeagent-wrapper` and the `~/.claude/.ccg/prompts/*` role files this command depends on. Without that runtime, this command will not run correctly.
+> **Prerequisite:** Requires the external `ccg-workflow` runtime, which is **not** part of the base ECC install. Initialize it with `npx ccg-workflow` to provision `~/.agents/bin/codeagent-wrapper` and the `~/.agents/.ccg/prompts/*` role files this command depends on. Without that runtime, this command will not run correctly.
 
 $ARGUMENTS
 
@@ -29,7 +29,7 @@ $ARGUMENTS
 ```
 # Resume session call (recommended) - Implementation Prototype
 Bash({
-  command: "~/.claude/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> resume <SESSION_ID> - \"$PWD\" <<'EOF'
+  command: "~/.agents/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> resume <SESSION_ID> - \"$PWD\" <<'EOF'
 ROLE_FILE: <role prompt path>
 <TASK>
 Requirement: <task description>
@@ -44,7 +44,7 @@ EOF",
 
 # New session call - Implementation Prototype
 Bash({
-  command: "~/.claude/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> - \"$PWD\" <<'EOF'
+  command: "~/.agents/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> - \"$PWD\" <<'EOF'
 ROLE_FILE: <role prompt path>
 <TASK>
 Requirement: <task description>
@@ -62,7 +62,7 @@ EOF",
 
 ```
 Bash({
-  command: "~/.claude/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> resume <SESSION_ID> - \"$PWD\" <<'EOF'
+  command: "~/.agents/bin/codeagent-wrapper {{LITE_MODE_FLAG}}--backend <codex|antigravity> resume <SESSION_ID> - \"$PWD\" <<'EOF'
 ROLE_FILE: <role prompt path>
 <TASK>
 Scope: Audit the final code changes.
@@ -90,8 +90,8 @@ EOF",
 
 | Phase | Codex | Antigravity |
 |-------|-------|--------|
-| Implementation | `~/.claude/.ccg/prompts/codex/architect.md` | `~/.claude/.ccg/prompts/antigravity/frontend.md` |
-| Review | `~/.claude/.ccg/prompts/codex/reviewer.md` | `~/.claude/.ccg/prompts/antigravity/reviewer.md` |
+| Implementation | `~/.agents/.ccg/prompts/codex/architect.md` | `~/.agents/.ccg/prompts/antigravity/frontend.md` |
+| Review | `~/.agents/.ccg/prompts/codex/reviewer.md` | `~/.agents/.ccg/prompts/antigravity/reviewer.md` |
 
 **Session Reuse**: If `/ccg:plan` provided SESSION_ID, use `resume <SESSION_ID>` to reuse context.
 
@@ -117,7 +117,7 @@ TaskOutput({ task_id: "<task_id>", block: true, timeout: 600000 })
 `[Mode: Prepare]`
 
 1. **Identify Input Type**:
-   - Plan file path (e.g., `.claude/plan/xxx.md`)
+   - Plan file path (e.g., `.agents/plan/xxx.md`)
    - Direct task description
 
 2. **Read Plan Content**:
@@ -181,7 +181,7 @@ mcp__ace-tool__search_context({
 
 **Limit**: Context < 32k tokens
 
-1. Call Antigravity (use `~/.claude/.ccg/prompts/antigravity/frontend.md`)
+1. Call Antigravity (use `~/.agents/.ccg/prompts/antigravity/frontend.md`)
 2. Input: Plan content + retrieved context + target files
 3. OUTPUT: `Unified Diff Patch ONLY. Strictly prohibit any actual modifications.`
 4. **Antigravity is frontend design authority, its CSS/React/Vue prototype is the final visual baseline**
@@ -190,7 +190,7 @@ mcp__ace-tool__search_context({
 
 #### Route B: Backend/Logic/Algorithms → Codex
 
-1. Call Codex (use `~/.claude/.ccg/prompts/codex/architect.md`)
+1. Call Codex (use `~/.agents/.ccg/prompts/codex/architect.md`)
 2. Input: Plan content + retrieved context + target files
 3. OUTPUT: `Unified Diff Patch ONLY. Strictly prohibit any actual modifications.`
 4. **Codex is backend logic authority, leverage its logical reasoning and debug capabilities**
@@ -251,12 +251,12 @@ mcp__ace-tool__search_context({
 **After changes take effect, MUST immediately parallel call** Codex and Antigravity for Code Review:
 
 1. **Codex Review** (`run_in_background: true`):
-   - ROLE_FILE: `~/.claude/.ccg/prompts/codex/reviewer.md`
+   - ROLE_FILE: `~/.agents/.ccg/prompts/codex/reviewer.md`
    - Input: Changed Diff + target files
    - Focus: Security, performance, error handling, logic correctness
 
 2. **Antigravity Review** (`run_in_background: true`):
-   - ROLE_FILE: `~/.claude/.ccg/prompts/antigravity/reviewer.md`
+   - ROLE_FILE: `~/.agents/.ccg/prompts/antigravity/reviewer.md`
    - Input: Changed Diff + target files
    - Focus: Accessibility, design consistency, user experience
 
@@ -306,7 +306,7 @@ After audit passes, report to user:
 
 ```bash
 # Execute plan file
-/ccg:execute .claude/plan/feature-name.md
+/ccg:execute .agents/plan/feature-name.md
 
 # Execute task directly (for plans already discussed in context)
 /ccg:execute implement user authentication based on previous plan

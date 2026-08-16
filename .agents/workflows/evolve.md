@@ -17,7 +17,7 @@ python3 "${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning-v2/scripts/instinct-cl
 Or if `CLAUDE_PLUGIN_ROOT` is not set (manual installation):
 
 ```bash
-python3 ~/.claude/skills/continuous-learning-v2/scripts/instinct-cli.py evolve [--generate]
+python3 ~/.agents/skills/continuous-learning-v2/scripts/instinct-cli.py evolve [--generate]
 ```
 
 Analyzes instincts and clusters related ones into higher-level structures:
@@ -85,8 +85,8 @@ Example:
    - Agent candidates (larger, high-confidence clusters)
 5. Show promotion candidates (project -> global) when applicable
 6. If `--generate` is passed, write files to:
-   - Project scope: `~/.claude/homunculus/projects/<project-id>/evolved/`
-   - Global fallback: `~/.claude/homunculus/evolved/`
+   - Project scope: `~/.agents/homunculus/projects/<project-id>/evolved/`
+   - Global fallback: `~/.agents/homunculus/evolved/`
 
 ## Output Format
 

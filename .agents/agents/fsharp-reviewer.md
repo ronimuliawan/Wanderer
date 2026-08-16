@@ -1,12 +1,14 @@
 ---
 name: fsharp-reviewer
-description: Expert F# code reviewer specializing in functional idioms, type safety, pattern matching, computation expressions, and performance. Use for all F# code changes. MUST BE USED for F# projects.
+description: Expert F# code reviewer specializing in functional idioms, type safety,
+  pattern matching, computation expressions, and performance. Use for all F# code
+  changes. MUST BE USED for F# projects.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

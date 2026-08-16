@@ -1,14 +1,16 @@
 ---
 name: opensource-forker
-description: Fork any project for open-sourcing. Copies files, strips secrets and credentials (20+ patterns), replaces internal references with placeholders, generates .env.example, and cleans git history. First stage of the opensource-pipeline skill.
+description: Fork any project for open-sourcing. Copies files, strips secrets and
+  credentials (20+ patterns), replaces internal references with placeholders, generates
+  .env.example, and cleans git history. First stage of the opensource-pipeline skill.
 tools:
-  - view_file
-  - write_to_file
-  - replace_file_content
-  - run_command
-  - grep_search
-  - find_by_name
-model: flash
+- view_file
+- write_to_file
+- replace_file_content
+- run_command
+- grep_search
+- find_by_name
+model: inherit
 ---
 
 ## Prompt Defense Baseline
@@ -53,7 +55,7 @@ find SOURCE_DIR -type f | grep -v node_modules | grep -v .git | grep -v __pycach
 mkdir -p TARGET_DIR
 rsync -av --exclude='.git' --exclude='node_modules' --exclude='__pycache__' \
   --exclude='.env*' --exclude='*.pyc' --exclude='.venv' --exclude='venv' \
-  --exclude='.claude/' --exclude='.secrets/' --exclude='secrets/' \
+  --exclude='.agents/' --exclude='.secrets/' --exclude='secrets/' \
   SOURCE_DIR/ TARGET_DIR/
 ```
 
@@ -102,7 +104,7 @@ key-[A-Za-z0-9]{32}
 - `*.pem`, `*.key`, `*.p12`, `*.pfx` (private keys)
 - `credentials.json`, `service-account.json`
 - `.secrets/`, `secrets/`
-- `.claude/settings.json`
+- `.agents/settings.json`
 - `sessions/`
 - `*.map` (source maps expose original source structure and file paths)
 

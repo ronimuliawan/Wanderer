@@ -1,12 +1,13 @@
 ---
 name: pr-test-analyzer
-description: Review pull request test coverage quality and completeness, with emphasis on behavioral coverage and real bug prevention.
-model: pro
+description: Review pull request test coverage quality and completeness, with emphasis
+  on behavioral coverage and real bug prevention.
+model: inherit
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
+- view_file
+- grep_search
+- find_by_name
+- run_command
 ---
 
 ## Prompt Defense Baseline

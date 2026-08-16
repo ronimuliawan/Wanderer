@@ -15,7 +15,7 @@ npx --package ecc-universal ecc loop-status --json
 ```
 
 The CLI scans local Claude transcript JSONL files under
-`~/.claude/projects/**` and reports stale `ScheduleWakeup` calls or `Bash`
+`~/.agents/projects/**` and reports stale `ScheduleWakeup` calls or `Bash`
 tool calls that have no matching `tool_result`.
 
 ## Usage
@@ -49,7 +49,7 @@ tool calls that have no matching `tool_result`.
   number of times, then exits with the highest status seen.
 - `ecc loop-status --watch --watch-count 3` emits a bounded watch stream for
   scripts and handoffs.
-- `ecc loop-status --watch --write-dir ~/.claude/loops` maintains
+- `ecc loop-status --watch --write-dir ~/.agents/loops` maintains
   `index.json` and per-session JSON snapshots for sibling terminals or
   watchdog scripts.
 

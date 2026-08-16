@@ -1,12 +1,15 @@
 ---
 name: rag-pipeline-reviewer
-description: Reviews RAG (Retrieval-Augmented Generation) pipelines for retrieval quality, chunking strategy, embedding choices, and evaluation coverage. Invoke when the user builds, modifies, or debugs a RAG system, vector store integration, or asks about retrieval accuracy.
+description: Reviews RAG (Retrieval-Augmented Generation) pipelines for retrieval
+  quality, chunking strategy, embedding choices, and evaluation coverage. Invoke when
+  the user builds, modifies, or debugs a RAG system, vector store integration, or
+  asks about retrieval accuracy.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

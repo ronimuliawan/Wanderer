@@ -1,12 +1,14 @@
 ---
 name: rust-reviewer
-description: Expert Rust code reviewer specializing in ownership, lifetimes, error handling, unsafe usage, and idiomatic patterns. Use for all Rust code changes. MUST BE USED for Rust projects.
+description: Expert Rust code reviewer specializing in ownership, lifetimes, error
+  handling, unsafe usage, and idiomatic patterns. Use for all Rust code changes. MUST
+  BE USED for Rust projects.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

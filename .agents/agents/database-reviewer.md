@@ -1,12 +1,15 @@
 ---
 name: database-reviewer
-description: PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating migrations, designing schemas, or troubleshooting database performance. Incorporates Supabase best practices.
+description: PostgreSQL database specialist for query optimization, schema design,
+  security, and performance. Use PROACTIVELY when writing SQL, creating migrations,
+  designing schemas, or troubleshooting database performance. Incorporates Supabase
+  best practices.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

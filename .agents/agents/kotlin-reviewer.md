@@ -1,12 +1,14 @@
 ---
 name: kotlin-reviewer
-description: Kotlin and Android/KMP code reviewer. Reviews Kotlin code for idiomatic patterns, coroutine safety, Compose best practices, clean architecture violations, and common Android pitfalls.
+description: Kotlin and Android/KMP code reviewer. Reviews Kotlin code for idiomatic
+  patterns, coroutine safety, Compose best practices, clean architecture violations,
+  and common Android pitfalls.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

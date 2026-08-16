@@ -1,12 +1,14 @@
 ---
 name: code-architect
-description: Designs feature architectures by analyzing existing codebase patterns and conventions, then providing implementation blueprints with concrete files, interfaces, data flow, and build order.
-model: pro
+description: Designs feature architectures by analyzing existing codebase patterns
+  and conventions, then providing implementation blueprints with concrete files, interfaces,
+  data flow, and build order.
+model: inherit
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
+- view_file
+- grep_search
+- find_by_name
+- run_command
 ---
 
 ## Prompt Defense Baseline

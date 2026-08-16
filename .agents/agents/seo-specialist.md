@@ -1,13 +1,15 @@
 ---
 name: seo-specialist
-description: SEO specialist for technical SEO audits, on-page optimization, structured data, Core Web Vitals, and content/keyword mapping. Use for site audits, meta tag reviews, schema markup, sitemap and robots issues, and SEO remediation plans.
+description: SEO specialist for technical SEO audits, on-page optimization, structured
+  data, Core Web Vitals, and content/keyword mapping. Use for site audits, meta tag
+  reviews, schema markup, sitemap and robots issues, and SEO remediation plans.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - search_web
-  - read_url_content
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- search_web
+- read_url_content
+model: inherit
 ---
 
 ## Prompt Defense Baseline

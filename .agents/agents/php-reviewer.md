@@ -1,12 +1,14 @@
 ---
 name: php-reviewer
-description: Expert PHP code reviewer specializing in PSR-12 compliance, PHP type system, Eloquent ORM patterns, security, and performance. Use for all PHP code changes. MUST BE USED for PHP projects.
+description: Expert PHP code reviewer specializing in PSR-12 compliance, PHP type
+  system, Eloquent ORM patterns, security, and performance. Use for all PHP code changes.
+  MUST BE USED for PHP projects.
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
-  - run_command
-model: pro
+- view_file
+- grep_search
+- find_by_name
+- run_command
+model: inherit
 ---
 
 ## Prompt Defense Baseline

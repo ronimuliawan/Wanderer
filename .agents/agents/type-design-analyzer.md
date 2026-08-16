@@ -1,11 +1,12 @@
 ---
 name: type-design-analyzer
-description: Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.
-model: pro
+description: Analyze type design for encapsulation, invariant expression, usefulness,
+  and enforcement.
+model: inherit
 tools:
-  - view_file
-  - grep_search
-  - find_by_name
+- view_file
+- grep_search
+- find_by_name
 ---
 
 ## Prompt Defense Baseline
